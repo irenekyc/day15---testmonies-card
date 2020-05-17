@@ -22,7 +22,7 @@ body{
     width:100vw;
     background: url('./images/pattern-curve.svg') no-repeat;
     background-position:left bottom;
-    background-size:80%;
+    background-size:400px;
 }
 
 .testimonials-card{
@@ -61,6 +61,7 @@ body{
     background: white;
     border-radius: 20px;
     display:flex;
+    z-index:100;
 }
 
 .slider-btn .prev{
@@ -68,6 +69,8 @@ body{
     background-size:8px;
     background-position:center;
     width:50%;
+    cursor: pointer;
+    z-index:100;
 }
 
 .slider-btn .next{
@@ -75,6 +78,8 @@ body{
     background-size:8px;
     background-position:center;
     width:50%;
+    cursor: pointer;
+    z-index:100;
 }
 
 .slider-btn input{
@@ -103,11 +108,51 @@ body{
 
 .leading-text{
     font-weight:700;
+
 }
 
 .secondary-text{
     color: var(--blue);
+
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width:767px){
+    .testimonials-card{
+        display:flex;
+        flex-direction: row-reverse;
+        width:100vw;
+    }
+    .testimonials-card-image{
+        padding:2rem;
+        width:50%;
+    }
+    .testimonials-card-copy{
+        padding:2rem;
+        margin-top:3rem;
+        text-align: left;
+        padding-left: calc(100vw*0.1);
+        z-index:1;
+      
+    }
+    .testimonials-card-copy h2{
+        width:150%;
+        font-size: calc(100vw*0.02);
+        padding-right: calc(100vw*0.008);
+    }
+    .test-profile{
+        display:flex;
+        font-size:12px;
+    }
+    .test-profile p{
+        margin-right:0.5rem;
+    }
+    .slider-btn{
+        left:30%;
+    }
+
+
+}
+
